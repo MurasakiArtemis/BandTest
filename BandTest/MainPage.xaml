@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="BandTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BandTest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="TextBlock1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16">Microsoft Band Test</TextBlock>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Connect Sensor" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click" FontFamily="Global User Interface" FontSize="16"/>
+            <Button Content="Start Sensor" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Start_Measure_Clank" FontFamily="Global User Interface" FontSize="16"/>
+        </StackPanel>
+        <Grid>
+            <TextBlock x:Name="time" Margin="0,0,0,0">Tiempo:</TextBlock>
+            <TextBlock x:Name="date" HorizontalAlignment="Right" Margin="0,0,10,0">Fecha:</TextBlock>
+        </Grid>
+        <TextBlock x:Name="TextBlockRutaCSV" Text="Documento CSV (EPOC)"/>
+        <Grid>
+            <TextBox x:Name="TextBoxRutaCSV" Grid.Column="0" IsEnabled="False"/>
+            <Button x:Name="ButtonOpenCSV" Grid.Column="1" Content="&#xEC50;" Click="ButtonOpenCSV_Clonk"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Button Content="Stop" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="StopSensor_Clink" FontFamily="Global User Interface" FontSize="16"/>
+        <TextBlock x:Name="HeartRate" Margin="0,0,0,0">Heart Rate:</TextBlock>
+        <TextBlock x:Name="SkinResponse" Margin="0,0,0,0">Galvanic Response:</TextBlock>
+        <TextBlock x:Name="SkinTemperature" Margin="0,0,0,0">Skin temperature:</TextBlock>
+        <TextBlock x:Name="AmbientLight" Margin="0,0,0,0">Ambient Light:</TextBlock>
+        <TextBlock x:Name="AccelerometerX" Margin="0,0,0,0">Accelerometer X:</TextBlock>
+        <TextBlock x:Name="AccelerometerY" Margin="0,0,0,0">Accelerometer Y:</TextBlock>
+        <TextBlock x:Name="AccelerometerZ" Margin="0,0,0,0">Accelerometer Z:</TextBlock>
+        <TextBlock x:Name="AirPressure" Margin="0,0,0,0">Air Pressure:</TextBlock>
+        <TextBlock x:Name="Temperature" Margin="0,0,0,0">Air Pressure:</TextBlock>
+    </StackPanel>
+</Page>
